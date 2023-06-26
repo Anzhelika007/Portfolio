@@ -159,7 +159,7 @@ h5 {
 }
 
 .container {
-  width: 1205px;
+  width: 1190px;
   margin-left: auto;
   margin-right: 130px;
 }
@@ -310,13 +310,18 @@ h5 {
 .possibilities {
   background-color: #151E29;
   width: 100%;
+  display: flex;
+}
+.possibilities__photo {
+  max-width: 585px;
+  filter: grayscale(1);
 }
 .possibilities__wrapper {
   background-color: #0E151D;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 120px;
+  padding: 120px 110px;
   gap: 25px;
 }
 .possibilities__item {
@@ -354,11 +359,37 @@ h5 {
   height: 70px;
   margin-bottom: 43px;
 }
-
-.first__card {
+.possibilities .first__card {
   padding: 0;
   background-color: #0E151D;
   background-image: url(now);
+}
+
+.numders__wrapper {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #18222E;
+}
+.numders__wrapper > :nth-child(even) {
+  background-color: #101923;
+}
+.numders__items {
+  width: 300px;
+  height: 300px;
+  padding-top: 94px;
+}
+.numders__items:first-child, .numders__items:last-child {
+  color: #3BC6CF;
+}
+.numders__items:nth-child(2) {
+  color: #EF8B53;
+}
+.numders__items:nth-child(3) {
+  color: #2BD195;
+}
+.numders__items-text {
+  color: #FFFFFF;
 }
 
 button {

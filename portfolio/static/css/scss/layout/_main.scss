@@ -1,13 +1,19 @@
 .possibilities {
     background-color: $bg-blue-dark;
     width: 100%;
+    display: flex;
+
+    &__photo {
+        max-width: 585px;
+        filter: grayscale(1);
+    }
 
     &__wrapper {
         background-color: $bg-dark;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 120px;
+        padding: 120px 110px;
         gap: 25px;
     }
 
@@ -52,10 +58,48 @@
             margin-bottom: 43px;
         }
     }
+
+    .first__card {
+        padding: 0;
+        background-color: $bg-dark;
+        background-image: url(now);
+    }
 }
 
-.first__card {
-    padding: 0;
-    background-color: $bg-dark;
-    background-image: url(now);
+.numders {
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        background-color: $bg-blue-middle;
+
+        >:nth-child(even) {
+            background-color: $bg-dark-blue;
+        }
+
+    }
+
+    &__items {
+        width: 300px;
+        height: 300px;
+        padding-top: 94px;
+    }
+
+    &__items:first-child,
+    &__items:last-child {
+        color: $color-blue;
+    }
+
+    &__items:nth-child(2) {
+        color: $color-orange;
+    }
+
+    &__items:nth-child(3) {
+        color: $color-green;
+    }
+
+    &__items-text {
+        color: $color-white;
+    }
 }

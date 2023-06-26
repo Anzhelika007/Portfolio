@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "my resume",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch portfolio/static/css/scss/main.scss portfolio/static/css/style.css"
+  },
+  "author": "Anzhalika Turlak",
+  "license": "ISC"
+}

@@ -1,25 +1,116 @@
 .header {
-    background-color: $color-bg-base;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 130px;
+    background: $bg-blue-dark;
+    position: relative;
     height: 100vh;
 
-    &__menu {
-        max-width: 25px;
-        margin: 0 auto;
-        padding: 50px 0;
-        height: 100%;
+    &__wrapper {
+        margin-right: $margin-menu;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        height: 100vh;
+        width: calc(100wh - 130px);
+    }
 
-        &-svg {
-            height: 25px;
-            width: 25px;
+    &__photo {
+        width: 55%;
+        position: relative;
+        background-image: url(../images/20230618_131420.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: grayscale(1);
+
+        &-title {
+            height: 100%;
+            writing-mode: vertical-lr;
+            transform: rotate(-180deg);
+            white-space: nowrap;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 10px 0;
         }
     }
 
+    &__info {
+        width: 45%;
+        background: $color-white;
+        padding: 211px 126px 212px 120px;
 
+        >* {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__info-hello {
+        @extend %font-base;
+        @extend %text-shadow;
+        @include font($size: 2.4rem, $height: 2.9rem, $weight: 600, $style: normal);
+        color: $color-orange;
+    }
+
+    &__info-title {
+        @extend %text-shadow;
+        padding-bottom: 10px;
+    }
+
+    &__info-text {
+        @extend %text-shadow;
+        padding-bottom: 15px;
+        position: relative;
+        color: $grey-dark;
+
+        &::after {
+            content: '';
+            border-bottom: 1px solid #000000;
+            border-bottom-style: double;
+            opacity: 0.1;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+        }
+    }
+
+    &__content {
+        padding-top: 25px;
+        display: flex;
+        justify-content: space-between;
+
+        &-text {
+            @extend %text-shadow;
+            @extend %font-base;
+            @include font($size: 1.6rem, $weight: 500, $style: normal);
+            color: $grey-light;
+        }
+
+        &-title {
+            @extend %text-shadow;
+            color: $bg-dark;
+        }
+    }
+
+    &__button {
+        padding-top: 70px;
+        margin-right: 30px;
+
+        &-btn {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &__button-link {
+        @extend %text-shadow;
+        @extend %font-base;
+        @include font($size: 2.0rem, $weight: 600, $style: normal);
+        color: $bg-dark;
+        padding-left: 35px;
+
+        &::before {
+            content: url(../icons/send.svg);
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    }
 }

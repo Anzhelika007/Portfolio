@@ -10,51 +10,104 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="header__menu">
-            <a class="header__menu-link" href="#">
-                <svg class="header__menu-svg">
-                    <use href="/static/icons/sprite.svg#menu">
+    <header class="header container-fluid">
+        <div class="header__wrapper">
+            <div class="header__photo">
+                <h1 class="header__photo-title">Web Developer</h1>
+            </div>
+            <div class="header__info">
+                <div class="header__info-hello">Hello! Commodo excepteur aliqua.</div>
+                <h2 class="header__info-title">I’m Anzhalika Turlak</h2>
+                <div class="header__info-text">Fugiat consectetur dolor velit sit sit do est irure labore eiusmod.
+                    Laboris in enim ex ex sunt est. Minim labore quis non enim anim tempor enim. Veniam aliqua
+                    reprehenderit ipsum eu dolore in anim enim id labore</div>
+                <div class="header__content">
+                    <div class="header__content-item">
+                        <div class="header__content-text">Role</div>
+                        <h5 class="header__content-title">Web Developer</h5>
+                    </div>
+                    <div class="header__content-item">
+                        <div class="header__content-text">Experience</div>
+                        <h5 class="header__content-title">0+ years</h5>
+                    </div>
+                    <div class="header__content-item">
+                        <div class="header__content-text">Country</div>
+                        <h5 class="header__content-title">Georgia, Batumi</h5>
+                    </div>
+                </div>
+                <div class="header__button">
+                    <button class="header__button-btn">Download CV</button>
+                    <a class="header__button-link" href="#">contact me now</a>
+                </div>
+            </div>
+        </div>
+        <nav class="menu">
+            <a class="menu-link" href="#">
+                <svg class="menu-svg">
+                    <use href="../../static/icons/sprite.svg#menu"></use>
                 </svg>
             </a>
-            <form>
-                <input type="text">
-                <input type="text">
-            </form>
+            <div class="menu__social">
+                <a class="menu__social-link" href="#">
+                    <div class="menu__social-text">ln</div>
+                </a>
+                <a class="menu__social-link" href="#">
+                    <div class="menu__social-text">git</div>
+                </a>
+                <a class="menu__social-link" href="#">
+                    <div class="menu__social-text">tl</div>
+                </a>
+                <a class="menu__social-link" href="#">
+                    <div class="menu__social-text">tel</div>
+                </a>
+            </div>
         </nav>
     </header>
-    <!-- <main>
-        <section class="about">
-            <div class="header__wrapper">
-                <div class="about__block">
-                    <img class="about__block-photo" src="../../static/images/im.jpg" alt="My photo">
-                    <h1 class="about__block-title">Web Developer</h1>
-                </div>
-                <div class="about__block">
-                    <div class="about__block-items">Hello! Commodo excepteur aliqua.</div>
-                    <h2 class="about__block-items">I’m Christopher Collinson</h2>
-                    <div class="about__block-items">Fugiat consectetur dolor velit sit sit do est irure labore eiusmod.
-                        Laboris in enim ex ex sunt est. Minim labore quis non enim anim tempor enim. Veniam aliqua
-                        reprehenderit ipsum eu dolore in anim enim id labore.</div>
+    <main>
+        <section class="possibilities">
+            <div class="container possibilities__wrapper">
+                <div class="possibilities__item first__card">
+                    <div class="possibilities__item-sticker">What I can offer</div>
+                    <h3 class="possibilities__item-title">My services</h3>
+                    <h5 class="possibilities__item-title-small">Fugiat consectetur dolor velit sit sit do est irure
+                        labore eiusmod.
+                        Laboris in enim ex ex sunt est.</h5>
+                    <p class="possibilities__item-text">Laboris in enim ex ex sunt est. Minim labore quis non enim anim
+                        tempor enim. Veniam aliqua reprehenderit ipsum eu.</p>
 
-                    <div class="about__block-items">
-                        <div class="about__block-about"><span class="about__block-title">Role</span>
-                            <span class="about__block-text">Web Developer</span>
-                        </div>
-                        <div class="about__block-about"><span class="about__block-title">Experience</span>
-                            <span class="about__block-text">8+ years</span>
-                        </div>
-                        <div class="about__block-about"><span class="about__block-title">Country</span>
-                            <span class="about__block-text">Canada, Toronto</span>
-                        </div>
-                    </div>
-                    <div class="about__block-items">
-                        <button class="about__block-btn">Download CV</button>
-                        <div class="about__block-send">contact me now</div>
-                    </div>
                 </div>
+                <div class="possibilities__item">
+                    <svg class="possibilities__item-svg">
+                        <use href="../../static/icons/sprite.svg#web"></use>
+                    </svg>
+                    <h4 class="possibilities__item-title-xm">Web development</h4>
+                    <p class="possibilities__item-text">Fugiat consectetur dolor velit sit sit do est irure labore
+                        eiusmod. Laboris in enim ex ex sunt est. Minim labore quis non enim anim tempor enim. Veniam
+                        aliqua reprehenderit ipsum eu.</p>
+                </div>
+                <div class="possibilities__item">
+                    <svg class="possibilities__item-svg">
+                        <use href="../../static/icons/sprite.svg#app"></use>
+                    </svg>
+                    <h4 class="possibilities__item-title-xm">App development</h4>
+                    <p class="possibilities__item-text">Fugiat consectetur dolor velit sit sit do est irure labore
+                        eiusmod. Laboris in enim ex ex sunt est. Minim labore quis non enim anim tempor enim. Veniam
+                        aliqua reprehenderit ipsum eu.</p>
+                </div>
+                <div class="possibilities__item">
+                    <svg class="possibilities__item-svg">
+                        <use href="../../static/icons/sprite.svg#desctop"></use>
+                    </svg>
+                    <h4 class="possibilities__item-title-xm">Desktop Development</h4>
+                    <p class="possibilities__item-text">Fugiat consectetur dolor velit sit sit do est irure labore
+                        eiusmod. Laboris in enim ex ex sunt est. Minim labore quis non enim anim tempor enim. Veniam
+                        aliqua reprehenderit ipsum eu.</p>
+                </div>
+
+            </div>
         </section>
-    </main> -->
+
+    </main>
     <footer></footer>
 
 </body>

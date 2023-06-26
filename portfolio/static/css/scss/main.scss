@@ -1,8 +1,21 @@
-@import 'abstracts/variables';
 @import 'base/reset';
-@import 'base/base.scss';
+@import 'base/fonts';
+
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/placeholders';
+@import 'abstracts/mixins';
+
+// Base
+@import 'base/base';
+
+// Layout
 @import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/main';
 @import 'layout/footer';
+
+// Components
 @import 'components/buttons';
 
 //pages

@@ -1,34 +1,378 @@
-* {
+html {
   box-sizing: border-box;
-  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
   padding: 0;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-size: inherit;
+}
+
 h1 {
-  font-size: 20px;
+  padding: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("fonts/Josefin_Sans/JosefinSansBold.eot");
+  src: url("fonts/Josefin_Sans/JosefinSansBold.eot?#iefix") format("embedded-opentype"), url("fonts/Josefin_Sans/JosefinSansBold.woff2") format("woff2"), url("fonts/Josefin_Sans/JosefinSansBold.woff") format("woff"), url("fonts/Josefin_Sans/JosefinSansBold.svg#Josefin Sans Bold") format("svg");
   font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2074;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("fonts/Josefin_Sans/JosefinSansSemiBold.eot");
+  src: url("fonts/Josefin_Sans/JosefinSansSemiBold.eot?#iefix") format("embedded-opentype"), url("fonts/Josefin_Sans/JosefinSansSemiBold.woff2") format("woff2"), url("fonts/Josefin_Sans/JosefinSansSemiBold.woff") format("woff"), url("fonts/Josefin_Sans/JosefinSansSemiBold.svg#Josefin Sans SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2074;
+}
+@font-face {
+  font-family: "Advent Pro";
+  src: url("fonts/Advent_Pro/AdventProMedium.eot");
+  src: url("fonts/Advent_Pro/AdventProMedium.eot?#iefix") format("embedded-opentype"), url("fonts/Advent_Pro/AdventProMedium.woff2") format("woff2"), url("fonts/Advent_Pro/AdventProMedium.woff") format("woff"), url("fonts/Advent_Pro/AdventProMedium.svg#Advent Pro Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-9997;
+}
+@font-face {
+  font-family: "Advent Pro";
+  src: url("fonts/Advent_Pro/AdventProSemiBold.eot");
+  src: url("fonts/Advent_Pro/AdventProSemiBold.eot?#iefix") format("embedded-opentype"), url("fonts/Advent_Pro/AdventProSemiBold.woff2") format("woff2"), url("fonts/Advent_Pro/AdventProSemiBold.woff") format("woff"), url("fonts/Advent_Pro/AdventProSemiBold.svg#Advent Pro SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-9997;
+}
+h4, h3, h2, h1 {
+  font-family: "Josefin Sans", Verdana, sans-serif;
+}
+
+button, .possibilities__item-sticker, .menu__social-link, .menu, .header__button-link, .header__content-text, .header__info-hello, h5, body {
+  font-family: "Advent Pro", Verdana, sans-serif;
+}
+
+.header__button-link, .header__content-title, .header__content-text, .header__info-text, .header__info-title, .header__info-hello {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 3rem;
+  background-color: #0E151D;
+}
+
+h1 {
+  font-size: 13.5135135135vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 8rem;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-size: 8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 8rem;
+}
+
+h3 {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 4.8rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3.4rem;
+}
+
+h5 {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3.4rem;
+}
+
+.container-fluid {
+  max-width: 1920px;
+  margin-left: auto;
+}
+
+.container {
+  width: 1205px;
+  margin-left: auto;
+  margin-right: 130px;
 }
 
 .header {
-  background-color: #0E151D;
+  background: #151E29;
+  position: relative;
+  height: 100vh;
+}
+.header__wrapper {
+  margin-right: 130px;
+  display: flex;
+  height: 100vh;
+  width: calc(100wh - 130px);
+}
+.header__photo {
+  width: 55%;
+  position: relative;
+  background-image: url(../images/20230618_131420.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(1);
+}
+.header__photo-title {
+  height: 100%;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px 0;
+}
+.header__info {
+  width: 45%;
+  background: #FFFFFF;
+  padding: 211px 126px 212px 120px;
+}
+.header__info > * {
+  padding-bottom: 20px;
+}
+.header__info-hello {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.9rem;
+  color: #EF8B53;
+}
+.header__info-title {
+  padding-bottom: 10px;
+}
+.header__info-text {
+  padding-bottom: 15px;
+  position: relative;
+  color: #546371;
+}
+.header__info-text::after {
+  content: "";
+  border-bottom: 1px solid #000000;
+  border-bottom-style: double;
+  opacity: 0.1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.header__content {
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__content-text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6rem;
+  color: #9BA3AE;
+}
+.header__content-title {
+  color: #0E151D;
+}
+.header__button {
+  padding-top: 70px;
+  margin-right: 30px;
+}
+.header__button-btn {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.header__button-link {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2rem;
+  color: #0E151D;
+  padding-left: 35px;
+}
+.header__button-link::before {
+  content: url(../icons/send.svg);
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.menu {
+  display: block;
+  background-color: #151E29;
   position: fixed;
   top: 0;
   right: 0;
-  width: 130px;
   height: 100vh;
-}
-.header__menu {
-  max-width: 25px;
-  margin: 0 auto;
-  padding: 50px 0;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 130px;
+  padding: 50px 52px;
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3.4rem;
 }
-.header__menu-svg {
+.menu-svg {
+  width: 30px;
   height: 25px;
-  width: 25px;
+}
+.menu__social {
+  display: flex;
+  flex-direction: column;
+}
+.menu__social-link {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.9rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.menu__social-link:not(:last-child)::after {
+  content: "|";
+  padding-left: calc(50% - 12.5px + 0.5px);
+  margin-top: 20px;
+  line-height: 50px;
+}
+
+.possibilities {
+  background-color: #151E29;
+  width: 100%;
+}
+.possibilities__wrapper {
+  background-color: #0E151D;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 120px;
+  gap: 25px;
+}
+.possibilities__item {
+  width: 468px;
+  padding: 50px;
+  background-image: url(../images/bg/bg-development.png);
+}
+.possibilities__item-sticker {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.9rem;
+  color: #EF8B53;
+  padding-bottom: 12px;
+}
+.possibilities__item-title {
+  color: #FFFFFF;
+  padding-bottom: 30px;
+}
+.possibilities__item-title-xm {
+  color: #FFFFFF;
+  line-height: 2.4rem;
+  padding-bottom: 10px;
+}
+.possibilities__item-title-small {
+  color: #FFFFFF;
+  padding-bottom: 20px;
+}
+.possibilities__item-text {
+  color: #9BA3AE;
+  line-height: 2.7rem;
+}
+.possibilities__item-svg {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 43px;
+}
+
+.first__card {
+  padding: 0;
+  background-color: #0E151D;
+  background-image: url(now);
+}
+
+button {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.8rem;
+  weight: 155px;
+  height: 66px;
+  color: #FFFFFF;
+  background-color: #EF8B53;
+  border: 1px solid #EF8B53;
+  padding: 24px 30px;
+  margin-right: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

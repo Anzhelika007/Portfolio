@@ -33,7 +33,7 @@
     &__info {
         width: 45%;
         background: $color-white;
-        padding: 211px 126px 212px 120px;
+        padding: 111px 126px 212px 120px;
 
         >* {
             padding-bottom: 20px;
@@ -61,7 +61,7 @@
         &::after {
             content: '';
             border-bottom: 1px solid #000000;
-            border-bottom-style: double;
+            border-bottom-style: thick double;
             opacity: 0.1;
             position: absolute;
             bottom: 0;

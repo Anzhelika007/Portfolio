@@ -21,7 +21,8 @@ h2 {
 
 h3 {
     @extend %font-title;
-    @include font($size: 4.8rem, $weight: 600, $style: normal);
+    @include font($size: 4.8rem, $weight: 700, $style: normal);
+    color: $color-white;
 }
 
 h4 {
@@ -41,7 +42,7 @@ h5 {
 }
 
 .container {
-    width: 1190px;
+    width: 1205px;
     margin-left: auto;
     margin-right: $margin-menu;
 }
